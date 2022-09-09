@@ -1,0 +1,55 @@
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+#include <string>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int num_articulo, opcion;
+	float precio_articulo;
+	string articulo, descripcion, categoria;
+	cout<<"\t ***MUGIWARA STORE*** \n";
+	cout<<"\n\nElige una opcion: \n\n 1.-Agregar Videojuego \n\n 2.-Modificar Videojuego \n\n 3.-Eliminar Videojuego \n\n 4.-Lista de Videojuegos \n\n 5.-Limpiar Pantalla \n\n 6.-Salir \n\n";
+	cin>>opcion;
+	
+	switch(opcion){
+		case 1: //Agregar Videojuego
+			cout<<"Ingrese el numero de articulo\n";
+			cin>>num_articulo;
+			cout<<"ingrese el nombre del videojuego\n";
+			cin.ignore();//me ignora el primer espacio
+			getline(cin, articulo); //permite ejecutar los espacios en la variable
+			cout<<"ingrese el descripcion del videojuego\n";
+			cin.ignore();
+			getline(cin, descripcion);
+			cout<<"ingrese la categoria del videojuego\n";
+			cin.ignore();
+			getline(cin, categoria);
+			cout<<"ingrese el precio del videojuego\n";
+			cin>>precio_articulo;
+			return main();
+			break;
+		case 2: //Modificar Videojuego
+			return main();
+			break;
+		case 3: //Eliminar Videojuego
+			return main();
+			break;
+		case 4: //Lista de Videojuegos
+			return main();
+			break;
+		case 5: //Limpiar Pantalla
+			system("cls"); //clean se utiliza en web
+			return main();
+			break;
+		case 6: //salir
+			cout<<"Gracias. por utilizar el programa \n";
+			break;
+		default:
+			cout<< "ingrese un opcion correcta \n";
+			return main();
+	}
+	return 0;
+}
